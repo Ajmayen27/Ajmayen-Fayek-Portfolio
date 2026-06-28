@@ -1155,29 +1155,61 @@
     .navbar-actions .navbar-resume { display: none; } /* Hide resume in top nav if too tight */
     .navbar-burger { display: flex; }
     
-    .hero { flex-direction: column; text-align: left; }
-    .hero-inner { max-width: 100% !important; width: 100% !important; }
+    .hero { 
+      flex-direction: column; 
+      text-align: center; 
+      justify-content: center; 
+      align-items: center; 
+      gap: 32px; 
+      padding-top: 120px;
+    }
+    .hero-inner { 
+      order: 2; 
+      max-width: 100% !important; 
+      width: 100% !important; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+    }
+    .hero-badge { justify-content: center; margin-bottom: 24px; }
+    .hero-desc { text-align: center; }
+    .hero-actions { justify-content: center; }
+    .hero-stats { justify-content: center; text-align: center; margin-top: 40px; }
+    
     .hero-photo-wrap {
-      position: absolute;
-      right: 0;
-      bottom: 0;
+      order: 1;
+      position: relative;
+      right: auto;
+      bottom: auto;
       left: auto;
+      width: 220px;
+      height: 220px;
+      opacity: 1;
       transform: none !important;
-      width: 100%;
-      height: 60%;
-      opacity: 0.18;
-      animation: none;
-      align-items: flex-end;
+      animation: fadeIn 1s forwards;
+      background: rgba(0, 212, 170, 0.03);
+      border-radius: 50%;
+      border: 1px solid var(--border2);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 212, 170, 0.1);
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
       justify-content: center;
+      margin: 0 auto;
+      z-index: 1;
     }
     .hero-photo-img {
-      height: 100%;
+      height: 110%;
       width: auto;
       opacity: 1;
       filter: none;
+      object-fit: cover;
+      object-position: top center;
+      -webkit-mask-image: none !important;
+      mask-image: none !important;
     }
     .hero-photo-wrap::after { display: none; }
-    .hero-stats { gap: 24px; flex-wrap: wrap; margin-top: 48px; }
     .hero-scroll { display: none; }
 
     .about-grid, .contact-grid, .volunteer-grid { grid-template-columns: 1fr; }

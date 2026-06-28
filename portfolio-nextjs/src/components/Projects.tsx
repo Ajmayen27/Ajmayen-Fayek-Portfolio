@@ -8,6 +8,41 @@ export default function Projects() {
             Things I&apos;ve<br />
             <em>built.</em>
           </h2>
+
+          <div className="project-card reveal" style={{ gridColumn: "1 / -1", transitionDelay: "0.1s" }}>
+            <div className="project-num">04 / 2026</div>
+            <div className="project-name">Software Gaze HR</div>
+            <div className="project-desc">
+              An enterprise HR and client support platform featuring advanced employee
+              management, payroll processing, role-based access control, and real-time
+              client support. Built a WebSocket-powered support system allowing clients
+              to create and track tickets with instant updates. Includes multiple user
+              roles, secure JWT authentication, and scalable business workflows.
+            </div>
+
+            <div className="project-stack">
+              <span className="stack-tag">Java</span>
+              <span className="stack-tag">Spring Boot</span>
+              <span className="stack-tag">Spring Security</span>
+              <span className="stack-tag">JWT</span>
+              <span className="stack-tag">WebSocket</span>
+              <span className="stack-tag">JPA</span>
+              <span className="stack-tag">React</span>
+              <span className="stack-tag">Vite</span>
+              <span className="stack-tag">PostgreSQL</span>
+              <span className="stack-tag">Docker</span>
+            </div>
+
+            <a
+              href="https://github.com/Ajmayen27/Software-Gaze-HR"
+              className="project-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              view on github →
+            </a>
+          </div>
+
           <div className="projects-grid reveal">
             <div className="project-card reveal" style={{ transitionDelay: "0s" }}>
               <div className="project-num">01 / 2026</div>

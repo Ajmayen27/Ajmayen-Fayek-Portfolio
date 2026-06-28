@@ -4,14 +4,14 @@ import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 
 const NAV_SECTIONS = [
-  { id: "about",          label: "About",          icon: "01" },
-  { id: "experience",     label: "Experience",      icon: "02" },
-  { id: "education",      label: "Education",       icon: "03" },
-  { id: "projects",       label: "Projects",        icon: "04" },
-  { id: "skills",         label: "Skills",          icon: "05" },
-  { id: "certifications", label: "Certifications",  icon: "06" },
-  { id: "blog",           label: "Blog",            icon: "07" },
-  { id: "contact",        label: "Contact",         icon: "08" },
+  { id: "about",          label: "About" },
+  { id: "experience",     label: "Experience" },
+  { id: "education",      label: "Education" },
+  { id: "projects",       label: "Projects" },
+  { id: "skills",         label: "Skills" },
+  { id: "certifications", label: "Certifications" },
+  { id: "blog",           label: "Blog" },
+  { id: "contact",        label: "Contact" },
 ];
 
 const RESUME = "/resume/Ajmayen_Fayek_Resume.pdf";
@@ -103,7 +103,6 @@ export default function Navigation() {
                   className={`navbar-link ${active === s.id ? "navbar-link--active" : ""}`}
                   onClick={(e) => go(e, s.id)}
                 >
-                  <span className="navbar-link-num">{s.icon}</span>
                   {s.label}
                 </a>
               </li>
@@ -160,7 +159,6 @@ export default function Navigation() {
               className={`drawer-link ${active === s.id ? "drawer-link--active" : ""}`}
               onClick={(e) => go(e, s.id)}
             >
-              <span className="drawer-link-num">{s.icon}</span>
               <span className="drawer-link-label">{s.label}</span>
               {active === s.id && <span className="drawer-link-dot" aria-hidden />}
             </a>
